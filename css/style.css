@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color:whitesmoke;
+    min-width: 400px;
+}
+/*navegación*/
+header{
+    position:fixed;
+    width: 100%;
+    top:0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 100px;
+    transition: 0.5s linear;
+    background-color: rgba(252, 252, 252, 0.984);
+}
+.logo img{
+    width: 50px;
+}
+.navbar{
+  display: flex;
+   margin-left: 100px;
+}
+.navbar a{
+    padding: 8px 17px;
+    color:black;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.navbar a:hover{
+    color: rgba(106, 111, 206, 0.686);
+    border-radius: 0.2rem;
+    transition: 0.2 all linear;
+}
+/* .navbar a::after{
+    content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #313334;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+} */
+.navbar li{
+    list-style: none;
+}
+.header-icon{
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    column-gap: 0.8rem;
+}
+
+.header-icon .bx{
+    color: blue;
+}
+.header-icon .bx:hover{
+    color:#194D65;
+}
+
+#menu-icon{
+    color:blue;
+    font-size: 24px;
+    z-index: 100001;
+    cursor: pointer;
+    display: none;
+}
+
+/*busqueda nav-bar*/
+.search-box{
+    position:absolute;
+    top: 100%;
+    right: 0;
+    /* left: 50%; */
+    /* transform: translate(-50%); */
+    transform: scaleY(0);
+    transform-origin: top;
+    background-color: red;
+    width: 250px;
+}
+.search-box.active{
+    /* top:110%;
+    box-shadow: 2px 2px 2px 2px saddlebrown;
+    transition: 0.2s all linear; */
+    transform: scaleY(1);
+
+}
+.search-box input{
+    padding: 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: rgb(16, 38, 175);
+}
+.search-box input::placeholder{
+    font-size: 1rem;
+    font-weight: 500;
+}
+/*banner*/
+#banner{
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 100px; 
+    margin-bottom: 30px;
+}
+#banner h1{
+    color: white;
+    font-weight: 600;
+    font-size: 60px;  
+}
+/*Sobre Nosotros*/
+#que-hacemos,
+#cursos,
+#contacto,
+#productos {
+  scroll-margin-top: 80px;
+}
+
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 10px 30px;
+}
+
+/* Sección */
+.quienes-somos {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Texto */
+.quienes-somos .contenido {
+  flex: 1 1 450px;
+}
+
+.quienes-somos h2 {
+  font-size: 2rem;
+  color: #194D65;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.quienes-somos p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Imagen */
+.quienes-somos .imagen img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 10px;
+  object-fit: cover;
+  
+}
+
+/* Botón */
+.contenido .btn-vermas {
+  background-color: #45498e91;
+  color: #d9cfd8;
+  border: none;
+  padding: 12px 50px;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contenido .btn-vermas a{
+    color:white;
+    text-decoration: none;
+    font-weight: 500;
+}
+.btn-vermas:hover {
+  background-color: #b1a9df;
+}
+
+/*Cards Cursos*/
+.card{
+    margin-bottom: 30px;
+}
+.wrapper{
+    background-color: whitesmoke;
+    color: rgb(255, 255, 255);
+}
+#card-area{
+    padding: 30px 0;
+    
+}
+#card-area h1{
+    color: #194D65;
+}
+
+ .box-area{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-gap: 40px;
+    margin-top: 30px;
+}
+.box{
+    border-radius:10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px black;
+}
+.box img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.overlay{
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #2b6385 80%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+    display: flex;
+}
+/* .overlay h3{
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 20%;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: white;
+} */
+ .overlay h3{
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 20%;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: white;
+    /**/
+    padding: 5px;
+}
+.overlay a{
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+    background: #eceff1;
+    border-radius: 50px;
+    text-align:center;
+    padding: 5px 15px;
+
+}
+.box:hover img{
+    transform: scale(1.2);
+}
+.box:hover .overlay{
+    height: 100%;
+}
+
+/* Productos */
+.products{
+    margin-top:100px;
+}
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}    
+.products-container .box-catalago{
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: 1px 3px 3px 3px rgba(14, 13, 13, 0.448);
+}
+
+.products-container img{
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+}
+
+.products-container .box-catalago h3{
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+.products-container .box-catalago p{
+    padding: 15px;
+}
+.products-container .box-catalago .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.products-container .box-catalago .content span{
+    padding: 0 1rem;
+    color: rgb(47, 45, 45);
+    background-color: #194d655d;
+    border: 4px;
+    font-weight: 500;
+}
+.products-container .box-catalago .content a{
+    padding: 0.5rem 1rem;
+    color: rgb(16, 16, 16);
+    text-decoration: none;
+    border: 4px;
+    font-weight: 500;
+    background-color: #b1a9df;
+    border-radius: 12px;
+}
+.products-container .box-catalago .content a:hover{
+    color: rgb(51, 37, 37);
+}
+
+/* iniciar sesion */
+.form-main{
+    background-image:url(../img/form-fondo2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 60px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* 
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 100px; 
+    margin-bottom: 30px; */
+}
+.form-content{
+    /* margin-top: 100px; */
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+    
+}
+
+
+.form-content .form-box{
+    /* border: 1px solid rgb(44, 44, 44); */
+    /* padding: 40px 50px; */
+    padding: 35px 20px;
+    border-radius: 20px;
+    background-color:rgba(245, 245, 245, 0.567);
+    box-shadow: 1px 3px 3px 3px rgba(14, 13, 13, 0.448);
+      box-sizing: border-box; 
+}
+.form-content h3{
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.2;
+    color:#194D65;
+    font-weight: 600;
+}
+.form-content form{
+    margin: 30px 0 20px;
+}
+.form-content .input-box{
+    margin: 25px;
+}
+.form-content ::placeholder{
+    color:rgb(75, 75, 75);
+    opacity: 1;
+}
+.form-content .input-control{
+    display: block;
+    height: 45px;
+    width:100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    color: inherit;
+    font-weight: inherit;
+    font-size: 16px;
+}
+
+/* quita el border que aparece por defecto en los inputs */
+.form-content .input-control:focus{
+    outline: none;
+}
+.form-content .input-link{
+    margin-top: 10px;
+    text-align: right;
+}
+
+.form-content .form-btn{
+    height: 45px;
+    width: 100%;
+    
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+    border-radius: 25px;
+    user-select: none;
+    border: none;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: #194d65a9;
+     width: calc(100% - 50px); /* igual al margen izquierdo y derecho de tus inputs (25px + 25px) */
+  margin: 0 25px;
+    
+    
+}
+.form-content .form-btn::before{
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: background-color 0.5 ease;
+    z-index: -1;
+}
+.form-content .form-btn:hover::before{
+    background-color:#194D65;
+}
+.form-content p{
+    text-align:center;
+}
+.form-content a{
+    text-decoration: none;
+    color: rgb(30, 39, 95);
+}
+.form-content a:hover{
+    color: rgb(57, 57, 57);
+    cursor: pointer;
+}
+.form-btn a{
+    color:white;
+}
+
+
+/*Footer*/
+
+.container-footer{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer{
+    background-color: #194D65;
+    padding: 80px 0;
+}
+.row-footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-links{
+    width: 25%;
+    padding: 0;
+}
+.footer-links h3{
+    font-size: 20px;
+    color:wheat;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+.footer-links ul{
+     list-style: none;
+}
+.footer-links ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+/* .footer-links ul li a:hover{
+    color: white;
+    padding-left: 6px;
+} */
+.social-link a{
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: grey;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50px;
+    color: white;
+    transition: all .5s ease;
+}
+
+
+/**responsivo **/
+/**/@media screen and (max-width: 990px){
+   header{
+    padding: 12px 4%;
+   }
+   #menu-icon{
+    /* display: initial; */
+    display: block;
+   }
+   .navbar{
+    position: absolute;
+    top: 100%;
+    left: -100px;
+  
+    width: 100%;
+    background: #fff; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    
+    padding: 15px 0;
+    gap: 15px;
+    transition: 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+.navbar.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar li a {
+    color: #194D65; 
+    font-size: 1rem;
+  }
+
+
+
+  .search-box {
+    width: 90%;
+    right: 5%;
+  }
+    /*quienes somos*/
+    .quienes-somos {
+        flex-direction: column;
+        text-align: center;
+    }
+    .quienes-somos .contenido {
+    flex: 1 1 50px;
+    }
+
+    .quienes-somos .imagen {
+    display: none;
+  }
+
+  .btn-vermas {
+    margin: 0 auto;
+  }
+    /*footer*/
+    .row-footer{
+        text-align: center;
+    }
+    .footer-link{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-height:450px) {
+    .header .overlay a{
+        font-size: 20px;
+    }
+    .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+    #banner{
+        background-image: url(../img/banner.jpg);
+        height: 50px;
+    }
+
+    /*form*/
+    .form-content::after,
+    .form-content::before{
+        height: 250px;
+        width: 250px;
+        fill: blur(100px);
+    }
+    .form-content .form-box{
+        padding: 30px;
+    }
+    .form-content h3{
+        font-size: 24px
+    }
+}

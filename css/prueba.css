@@ -1,0 +1,187 @@
+/* Estilos generales del header
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px 40px;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  border-radius: 50%;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff; 
+}
+
+
+body {
+  margin: 0;
+  background-color: #1e1e1e;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+.header{
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    padding: 5px 5%;
+}
+
+.header .logo{
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.header .logo img{
+    height: 70px;
+    width: auto;
+    border-radius: 100px;
+}
+
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;    
+}
+
+
+.header .nav-links a{
+    font-weight: 600;
+    color: black; 
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.header .nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #194D65;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+.header .nav-links a:hover::after {
+  width: 100%;
+  
+}
+/* .header .nav-links a:hover{
+    color:#194D65;
+
+} 
+
+.menu {
+    display:none;
+}
+
+.header .btn button,
+.header .menu button{
+    margin-left: 20px;
+    font-weight: 700;
+    color: #e9e9e9;
+    padding: 9px 25px;
+    background: #307CA8;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover,
+.header .menu button:hover{
+    background-color: #194D65;
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+}
+
+
+.header a{
+    text-decoration: none;  
+}
+
+.header .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(33, 49, 63, .95);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: rgb(10, 10, 10);
+}
+
+.header .overlay a:hover, 
+.header .overlay a:focus{
+    color: #000000;
+}
+
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+
+}
+
+
+ .nav-links, .btn {
+        display: none;
+    }
+    .menu {
+        display: inherit;
+    } */
+
+    

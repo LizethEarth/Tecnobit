@@ -1,0 +1,204 @@
+.header-content{
+    margin-top: 65px; 
+    background-image: url(../img/the-office-banner.jpg);  
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+}
+.header-txt{
+    width: 50%;
+
+}
+.header-txt h1{
+    font-size: 110px;
+    color: rgb(255, 255, 255)
+}
+.header-txt p{
+    font-size: 16px;
+    color: white;
+} 
+
+/* .about{
+    padding: 100px 0;
+} */
+.container2 {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 10px 30px;
+}
+ 
+/* Sección */
+.que-hacemos {
+  margin-top: 55px;
+  margin-bottom: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  flex-wrap: wrap;
+}
+
+/* Texto */
+.que-hacemos .contenido {
+  flex: 1 1 55px;
+  background:#f7f9fa;
+  /* padding: 15px; */
+  /* box-shadow: 1px 4px 6px rgb(53, 53, 53); */
+  border-radius: 0 20px 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.186);
+  padding: 30px;
+}
+
+.que-hacemos h2 {
+  font-size: 2.1rem;
+  color:#194D65;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.que-hacemos p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Imagen */
+.que-hacemos .imag img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px 10px 10px 10px;
+  object-fit: cover;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.333);
+
+}
+.que-hacemos .imag img:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.mision {
+  padding: 60px 0;
+  background-color: #072a3b; 
+}
+
+.mision h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Texto en columnas */
+.mision .texto-columnas {
+  column-count: 2; /* número de columnas */
+  column-gap: 40px; /* espacio entre columnas */
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #ffffff;
+  max-width: 1000px;
+  margin: 0 auto; /* centra el bloque */
+}
+
+.container-card{
+  margin-top: 20px;
+
+}
+.wrapper-team{
+
+    background-color: whitesmoke;
+    color: rgb(255, 255, 255);
+}
+
+#team-area{
+    padding: 30px 0;
+    
+}
+#team-area h1{
+  color: #194D65;
+}
+.team-box-area{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-gap: 40px;
+    margin-top: 30px;
+}
+.team-box{
+    border-radius:10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.71);
+    transition: transform 0.5s;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+}
+.team-box img{
+    width: 100%;
+    /* border-radius: 0 0 0 10px; */
+    display: block;
+    /* transition: transform 0.5s; */
+}
+
+
+.overlay-team h3 {
+    margin-top: px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+    background: #ffffff;
+    text-align:center;
+    padding: 10px 25px;
+
+}
+.team-box:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.team-box:hover .overlay-team{
+    height: 100%;
+}
+
+@media(max-width:1256px){
+ .que-hacemos .imag {
+    display: none;   
+ }
+}
+
+@media (max-width: 990px) {
+  .mision .texto-columnas {
+    column-count: 1;
+  }
+}
+@media screen and (max-width: 990px){
+    .header-content{
+        padding: 100px 30px 30px 30px;
+    }
+    .header-txt{
+        width: 100%;
+        text-align: center;
+    }
+    .header-txt h1{
+        font-size: 90px;
+        line-height: 100px;
+    }
+    
+    .que-hacemos{
+        flex-direction: column;
+        text-align: center;
+    }
+    .que-hacemos .contenido {
+    flex: 1 1 50px;
+    border-radius: 40px 40px 40px 0;
+    }
+
+    .que-hacemos .imag {
+    display: none;
+  }
+    
+}
