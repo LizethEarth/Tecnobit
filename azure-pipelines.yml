@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+ name: Axen
 
 steps:
 - script: echo Hello, world!
