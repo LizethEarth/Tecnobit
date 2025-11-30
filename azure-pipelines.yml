@@ -1,34 +1,71 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+# # Starter pipeline
+# # Start with a minimal pipeline that you can customize to build and deploy your code.
+# # Add steps that build, run tests, deploy, and more:
+# # https://aka.ms/yaml
+
+# trigger:
+# - main
+
+# # pool:
+# #  name: Axen
+# pool:
+#   vmImage: 'ubuntu-latest'
+
+# steps:
+# - script: echo Hello, world!
+#   displayName: 'Run a one-line script'
+
+# - script: |
+#     echo Add other tasks to build, test, and deploy your project.
+#     echo See https://aka.ms/yaml
+#   displayName: 'Run a multi-line script'
+
+# - task: AzureWebApp@1
+#   inputs:
+#     azureSubscription: 'connection22545'        
+#     appName: 'Axen'      # Debe coincidir con el recurso en Azure
+#       appType: 'webApp'
+
+#     package: '$(Build.ArtifactStagingDirectory)/app.zip'
+#   displayName: 'Desplegar en Azure Web App'
+
+# # Desplegar en Azure Web App
+# -  task: AzureWebApp@1
+#   inputs:
+#     azureSubscription: 'connection22545'     # Configura tu Service Connection
+#     appName: 'Axen'                    # Debe coincidir con el recurso en Azure
+#        appType: 'webApp'
+#     package: '$(Build.ArtifactStagingDirectory)/app.zip'
+#   displayName: 'Desplegar en Azure Web App'
 
 trigger:
 - main
 
 pool:
- name: Axen
+  name: Axen   # Usa tu agente privado
 
 steps:
-- script: echo Hello, world!
+- script: echo "Hello, world!"
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+    echo "Add other tasks to build, test, and deploy your project."
+    echo "See https://aka.ms/yaml"
   displayName: 'Run a multi-line script'
 
-- task: AzureWebApp@1
+- task: ArchiveFiles@2
   inputs:
-    azureSubscription: 'connection22545'        
-    appName: 'Axen'      # Debe coincidir con el recurso en Azure
-    package: '$(Build.ArtifactStagingDirectory)/app.zip'
-  displayName: 'Desplegar en Azure Web App'
+    rootFolderOrFile: '$(Build.SourcesDirectory)/publicar'   # Carpeta con tu app compilada
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/app.zip'
+    replaceExistingArchive: true
+  displayName: 'Crear paquete app.zip'
 
-# Desplegar en Azure Web App
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: 'connection22545'     # Configura tu Service Connection
-    appName: 'Axen'                    # Debe coincidir con el recurso en Azure
+    azureSubscription: 'connection22545'   # Tu Service Connection
+    appName: 'Axen'                        # Nombre exacto del Web App en Azure
+    appType: 'webApp'
     package: '$(Build.ArtifactStagingDirectory)/app.zip'
   displayName: 'Desplegar en Azure Web App'
